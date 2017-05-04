@@ -34,11 +34,31 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+
+    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+	<div class="rg-image-wrapper">
+		{{if itemsCount > 1}}
+			<div class="rg-image-nav">
+				<a href="#" class="rg-image-nav-prev">Previous Image</a>
+				<a href="#" class="rg-image-nav-next">Next Image</a>
+			</div>
+		{{/if}}
+		<div class="rg-image"></div>
+		<div class="rg-loading"></div>
+		<div class="rg-caption-wrapper">
+			<div class="rg-caption" style="display:none;">
+				<p></p>
+			</div>
+		</div>
+	</div>
+	
+</script>
+
   </head>
 
-  <body>
-  <!-- Body Stuff -->
-  <section class="hero is-dark is-fullheight mainpic">
+ 	<body>
+  	<!-- Body Stuff -->
+  	<section class="hero is-dark is-large mainpic">
     <!-- Hero header: will stick at the top -->
     <div class="hero-head">
       <!-- Nav Stuff -->
@@ -59,9 +79,9 @@
             <!-- This "nav-menu" is hidden on mobile -->
             <!-- Add the modifier "is-active" to display it on mobile -->
             <div class="nav-right nav-menu">
-              <a class="nav-item" style="color: white;">Home</a>
-              <a class="nav-item" style="color: white;">Events</a>
-              <a class="nav-item" style="color: white;">Contact</a>
+              <a class="nav-item">Home</a>
+              <a class="nav-item">Events</a>
+              <a class="nav-item">Contact</a>
             </div>
           </div>
         </nav>
@@ -74,8 +94,126 @@
         <div class="introText">KiPow Canada</div>
       </div>
     </div>
-  </section>
+  	</section>
 
+  	<!-- About Stuff -->
+
+	<section class="hero is-small is-primary is-bold">
+	  <div class="hero-body">
+	    <div class="container">
+	    	<div class="columns is-mobile">
+			  <div class="column">
+			  	  <div class="obj has-text-centered">
+			        About
+			      </div>
+			      <div class="desc has-text-centered">
+			        Team KiPOW (Kid Power!) is an academic-community partnership first started in DC to help implement national health policy at impoverished schools. A task force of trained, energetic medical and undergraduate students go into schools and model healthy behaviors during lunch and recess. This time with mentors is intended to promote to positive health behavior and demonstrate improved physiologic markers.
+			      </div>
+			  </div>
+			</div>	      
+	    </div>
+	  </div>
+	</section>
+
+	<!-- Time Line -->
+	<section class="timeline">
+	  <ul>
+	  <div class="accomplish has-text-centered">What we have done so far</div>
+	    <li>
+	      <div>
+	        <event>Formation of KiPOW Canada</event>
+	        <time>September 2016</time>
+	        KiPOW! Canada was formed with the intention of tackling increasing rates of childhood obesity by teaching children about a healthy, balanced lifestyle and diet while also promoting daily physical activity. After coming across the successful U.S initiative; Team KiPOW!, we began to create an adaption of it here in Canada.
+	      </div>
+	    </li>
+	     
+	    <li>
+	      <div>
+	        <event>Partnership with SLYE</event>
+	        <time>October 2016</time>
+	        Steeles L'Amoreaux Youth Empowerment Network (SLYE) is a community outreach network that seeks to increase the accessibility of services for youth in Toronto. SLYE has assisted in guiding our initiative and connecting us to further resources. 
+	      </div>
+	    </li>
+
+	    <li>
+	      <div>
+	        <event>KiPOW! Canada as a UTSC Club</event>
+	        <time>November 2016</time>
+	        KiPOW! Canada Fundraising Committee (KCFC) became an official University of Toronto Scarborough Club. This is an outlet for fundraising for our initiative and recruitment of ambitious undergraduates.
+	      </div>
+	    </li>
+
+	    <li>
+	      <div>
+	        <event>Recruitment at UTSC</event>
+	        <time>January 2017</time>
+	        Undergraduate students were recruited to join the initiative! KiPOW! Canada now has an efficient marketing, IT, and event/fundraiser planning team. Furthermore, we have recruited science-based students to serve as mentors for the program itself.
+	      </div>
+	    </li>
+
+	    <li>
+	      <div>
+	        <event>Receiving the CEI Grant</event>
+	        <time>January 2017</time>
+	        KiPOW! Canada was awarded the Community Engagement Initiative Grant from University of Toronto. This grant provided us with the financial backing to carry out our pilot project.
+	      </div>
+	    </li>
+
+	    <li>
+	      <div>
+	        <event>KiPOW! at Evangel Temple's Girls Night Out</event>
+	        <time>February 2017</time>
+	        Evangel Temple hosted KiPOW! Canada during their 2 day Girls Night Out event which entailed that the youth of the church spend the night. KiPOW! Canada informed the girls about a healthy lifestyle and promoted physical activity through fun games and interactive conversations.
+	      </div>
+	    </li>
+
+	    <li>
+	      <div>
+	        <event>Partnership with Boys and Girls Club</event>
+	        <time>February 2017</time>
+	        Through our connections with City of Toronto Youth Coordinator, Eileen Alexander, KiPOW! Canada partnered up with L'Amoreaux Community Centre and Boys and Girls Club.
+	      </div>
+	    </li>
+
+	    <li>
+	      <div>
+	        <event>KiPOW! Canada at L'Amoreaux </event>
+	        <time>March 2017 - June 2017</time>
+	        KiPOW! Canada had our pilot at L'Amoreaux Community Centre. One day per week, we would ensure the children at the centre meet the daily requirement of physical activity, teach the children about health and nutrition, and provide them with snacks that serve as an example of healthy eating.
+	      </div>
+	    </li>
+
+	  </ul>
+	</section>
+
+	<section class="hero is-small is-primary is-bold">
+	  <div class="hero-body">
+	    <div id="rg-gallery" class="rg-gallery">
+			<div class="rg-thumbs">
+				<!-- Elastislide Carousel Thumbnail Viewer -->
+				<div class="es-carousel-wrapper">
+					<div class="es-nav">
+						<span class="es-nav-prev">Previous</span>
+						<span class="es-nav-next">Next</span>
+					</div>
+					<div class="es-carousel">
+						<ul>
+							<li>
+								<a href="#">
+									<img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="Some description" />
+								</a>
+							</li>
+							<li>...</li>
+						</ul>
+					</div>
+				</div>
+				<!-- End Elastislide Carousel Thumbnail Viewer -->
+			</div><!-- rg-thumbs -->
+		</div><!-- rg-gallery -->
+	  </div>
+	</section>
+
+  <script src="js/timeline.js"></script>
   </body>
 
 </html>

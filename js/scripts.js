@@ -1,4 +1,4 @@
-jQuery(function ($) {
+jQuery(document).ready(function($){
 
   var $toggle = $('.nav-toggle');
   var $menu = $('.nav-menu');
@@ -6,6 +6,5 @@ jQuery(function ($) {
   $toggle.click(function() {
     $menu.toggleClass('is-active');
   });
-
   
 });
